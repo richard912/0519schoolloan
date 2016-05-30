@@ -6,15 +6,19 @@
 				<%= image_tag("logo.png", class: "logo") %>
 			</div>
 		</div>
+
 		<div class="loan-calc col-sm-6">
 			<div class="row">
 				<div class="container-loan col-sm-5 col-sm-offset-6">
+
 					<%= image_tag("loan-circle.png", class: "circle") %>
 					<h3>LOAN CALCULATOR</h3>
+
 					<p>Calculate monthly payment and pay back period based on student's academic background and work experience</p>
 				</div>
 			</div>
 		</div>
+
 		<div class="comp-school col-sm-6">
 			<div class="row">
 				<div class="container-comp col-sm-5 col-sm-offset-1">
@@ -24,22 +28,27 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
 	<div class="head-loan-calc row">
 		<h1>LOAN CALCULATOR</h1>
 	</div>
+
 	<div class="row divider-arrow">
 		<img src="assets/dividerarrow.png">
 	</div>
+	
 	<div class="detail-loan-calc row" ng-controller="loan-calc">
 		<div class="loan-left col-sm-6">
 			<div class="row">
+
 				<div class="col-sm-10 col-sm-offset-1 validation-input" >
 					<input  class="col-sm-12" ng-keypress="remove_school_validation()" mytype="text" data-provide ="typeahead" data-source="<%=@schoolnames%>" ng-model = "schoolnames " ng-change = 'refreshmajors(); putNA();' placeholder="SCHOOL NAME" style="border-color:{{errordetail1 == '' ? '#abacae':'#a94442'}};">	
 					<p class="col-sm-12 validation-string">{{errordetail1}}</p>
 				</div>
 			</div>
 			<div class="row">
+				
 				<div class="col-sm-10 col-sm-offset-1 validation-input">
 					<input  class="col-sm-12" id="major" type="text" ng-change="putNA()" ng-keypress="remove_major_validation()" ng-model = "major" placeholder="MAJOR" style="border-color:{{errordetail2 == '' ? '#abacae':'#a94442'}};">	
 					<p class="col-sm-12 validation-string" >{{errordetail2}}</p>
